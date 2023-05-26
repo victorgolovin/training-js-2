@@ -60,12 +60,11 @@ const DECEMBER = 'Декабрь';
 
 const ERROR_TEXT = 'Ошибка ввода';
 
-getMonthByNumber(13);
+getMonthByNumber(5);
 
 function getMonthByNumber(monthNumber) {
-    let month = Number(monthNumber);
     
-    switch (month) {
+    switch (monthNumber) {
         case 1:
             console.log(JANUART);
             break;
@@ -107,7 +106,7 @@ function getMonthByNumber(monthNumber) {
             break;
     }
 
-    return month;
+    return monthNumber;
 }
 
 
@@ -122,23 +121,27 @@ const RUB_EUR_CURRENCY_RATE = 0.013;
 const RUB_KZT_CURRENCY_RATE = 5.56;
 const RUB_AED_CURRENCY_RATE = 0.046;
 
-let ACTUAL_RUB_USD_CURRENCY = valueRub * RUB_USD_CURRENCY_RATE;
+const RUB_USD_CURRENCY_TEXT_INPUT = 'USD';
+const RUB_EUR_CURRENCY_TEXT = 'EUR';
+const RUB_KZT_CURRENCY_TEXT = 'KZT';
+const RUB_AED_CURRENCY_TEXT = 'AED';
 
 
 function convertRub(valueRub, currency) {
 
-let rub = valueRub;
+    let RUB_USD_CURRENCY = valueRub * RUB_USD_CURRENCY_RATE;
+    let RUB_USD_CURRENCY_TEXT_INPUT = currency;
 
-    switch (valueRub, currency) {
-        case ACTUAL_RUB_USD_CURRENCY:
-            convertRub();
-            break;
-    
-        default:
-            break;
+    if (RUB_USD_CURRENCY + RUB_USD_CURRENCY_TEXT_INPUT) {
+        console.log(`${RUB_USD_CURRENCY} ${RUB_USD_CURRENCY_TEXT_INPUT}`);
+
+    } else {
+        console.log("WRONG")
     }
 
-    return valueRub, currency;
+    return;
+    
 }
 
-convertRub(1);
+convertRub(16666, 'ee453')
+
