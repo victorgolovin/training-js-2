@@ -134,7 +134,7 @@ const RUB_AED_CURRENCY_TEXT_OUTPUT = 'AED';
 const CURRENCY_TEXT_ERROR = 'Ошибка ввода, конвертация поддерживает только USD, EUR, KZT и AED.'
 
 
-convertRub(135342, 'USD');
+convertRub(4563, 'USD');
 
 
 function convertRub(valueRub, currency) {
