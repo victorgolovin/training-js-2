@@ -122,23 +122,47 @@ const RUB_EUR_CURRENCY_RATE = 0.013;
 const RUB_KZT_CURRENCY_RATE = 5.56;
 const RUB_AED_CURRENCY_RATE = 0.046;
 
-let ACTUAL_RUB_USD_CURRENCY = valueRub * RUB_USD_CURRENCY_RATE;
+const RUB_USD_CURRENCY_TEXT_INPUT = 'USD';
+const RUB_EUR_CURRENCY_TEXT_INPUT = 'EUR';
+const RUB_KZT_CURRENCY_TEXT_INPUT = 'KZT';
+const RUB_AED_CURRENCY_TEXT_INPUT = 'AED';
+
+const RUB_USD_CURRENCY_TEXT_OUTPUT = 'USD';
+const RUB_EUR_CURRENCY_TEXT_OUTPUT = 'EUR';
+const RUB_KZT_CURRENCY_TEXT_OUTPUT = 'KZT';
+const RUB_AED_CURRENCY_TEXT_OUTPUT = 'AED';
+
+const CURRENCY_TEXT_ERROR = 'Ошибка ввода, конвертация поддерживает только USD, EUR, KZT и AED.'
+
+
+convertRub(135342, 'USD');
 
 
 function convertRub(valueRub, currency) {
 
-let rub = valueRub;
-
     switch (valueRub, currency) {
-        case ACTUAL_RUB_USD_CURRENCY:
-            convertRub();
+        case RUB_USD_CURRENCY_TEXT_INPUT:
+            console.log(valueRub * RUB_USD_CURRENCY_RATE + ' ' + RUB_USD_CURRENCY_TEXT_OUTPUT);
             break;
-    
+        case RUB_EUR_CURRENCY_TEXT_INPUT:
+            console.log(valueRub * RUB_EUR_CURRENCY_RATE + ' ' + RUB_EUR_CURRENCY_TEXT_OUTPUT);
+            break;
+        case RUB_KZT_CURRENCY_TEXT_INPUT:
+            console.log(valueRub * RUB_KZT_CURRENCY_RATE + ' ' + RUB_KZT_CURRENCY_TEXT_OUTPUT);
+            break;
+        case RUB_AED_CURRENCY_TEXT_INPUT:
+            console.log(valueRub * RUB_AED_CURRENCY_RATE + ' ' + RUB_AED_CURRENCY_TEXT_OUTPUT);
+            break;
         default:
+            console.log(CURRENCY_TEXT_ERROR);
             break;
     }
 
-    return valueRub, currency;
+    return valueRub;
 }
 
-convertRub(1);
+
+
+
+
+
