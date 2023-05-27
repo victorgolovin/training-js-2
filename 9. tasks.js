@@ -60,12 +60,11 @@ const DECEMBER = 'Декабрь';
 
 const ERROR_TEXT = 'Ошибка ввода';
 
-getMonthByNumber(13);
+getMonthByNumber(5);
 
 function getMonthByNumber(monthNumber) {
-    let month = Number(monthNumber);
     
-    switch (month) {
+    switch (monthNumber) {
         case 1:
             console.log(JANUART);
             break;
@@ -107,7 +106,7 @@ function getMonthByNumber(monthNumber) {
             break;
     }
 
-    return month;
+    return monthNumber;
 }
 
 
@@ -160,9 +159,3 @@ function convertRub(valueRub, currency) {
 
     return valueRub;
 }
-
-
-
-
-
-
