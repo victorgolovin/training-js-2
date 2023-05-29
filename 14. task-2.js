@@ -37,20 +37,20 @@ console.log('-----------------------------')
 // Напишите функцию calculateNumbersSum(numbers), которая на вход принимает массив чисел и возвращает сумму этих чисел. 
 // Например, calculateNumbersSum([0, 1, 2, 4, 8] возвращает 15.
 
-const numbers = [];
+// const numbers = [];
 
-function calculateNumbersSum(numbers) {
-    let sum = 0;
+// function calculateNumbersSum(numbers) {
+//     let sum = 0;
 
-    for (let i = 0; i < numbers.length; i++) {
-        sum = sum + numbers[i];
-        console.log(sum)
-    }
+//     for (let i = 0; i < numbers.length; i++) {
+//         sum = sum + numbers[i];
+//         console.log(sum)
+//     }
 
-    return numbers;
-}
+//     return numbers;
+// }
 
-calculateNumbersSum([3, 5, 10, 56]);
+// calculateNumbersSum([3, 5, 10, 56]);
 
 console.log('-----------------------------')
 // Задание 4️⃣
@@ -58,19 +58,84 @@ console.log('-----------------------------')
 // Напишите функцию includes(numbers, number), которая на вход принимает массив чисел и число. 
 // Если число есть в массиве чисел, функция возвращает true, иначе - false.
 
+const numbers = [];
+
+function includes(numbers, number) {
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === number) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+console.log(includes([3], 4));
 
 
+console.log('-----------------------------');
 // Задание 5️⃣
 
 // Напишите функцию createPerson(name, surname, age). 
 // Функция принимаем имя человека, фамилию и возраст. 
 // Функция возвращает объект с полями name, surname, age.
 
+function createPerson({name, surname, age}) {
+    return {
+        name,
+        surname,
+        age,
+        getName: function() {
+            return this.name
+        },
+        getSurName: function() {
+            return this.surname
+        },
+        getAge: function() {
+            return this.age
+        },
+        buildText: function() {
+            return `Привет я ${this.getName()} ${this.getSurName()} мне ${this.age}`;
+        }
+    }
+}
+
+const myName = createPerson ({
+    name: 'Victor',
+    surname: 'Golovin',
+    age: 28
+});
+
+console.log(myName.buildText());
 
 
+console.log('-----------------------------');
 // Задание 6️⃣
 
 // Напишите функцию findOldest(people). 
 // Функция принимает массив из объектов. 
 // Каждый объект создайте через функцию createPerson. 
 // Функция возвращает имя самого старшего человека.
+
+const people = [
+    createPerson({ name: 'Victor', surname: 'Golovin', age: 28}),
+    createPerson({ name: 'Denis', surname: 'Ribakov', age: 25}),
+    createPerson({ name: 'Alina', surname: 'Osipova', age: 35}),
+    createPerson({ name: 'Alex', surname: 'Ivanov', age: 45}),
+];
+
+
+function findOldest(people) {
+    for (let i = 0; i < people.length; i++) {
+        const element = array[i];
+        
+    }
+}
+
+function getAge() {
+    return this.age
+};
+
+console.log(people);
+
