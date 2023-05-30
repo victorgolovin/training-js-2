@@ -8,7 +8,7 @@
 //     }
 
 //     return numbers;
-// }
+// };
 
 // printNumbers();
 
@@ -23,10 +23,10 @@ console.log('-----------------------------')
 function printNumbersByRange(start, end) {
     for (let index = start; index <= end; index++) {
         console.log(index);    
-    }
+    };
 
     return start, end;
-}
+};
 
 printNumbersByRange(-3, 2);
 
@@ -48,7 +48,7 @@ console.log('-----------------------------')
 //     }
 
 //     return numbers;
-// }
+// };
 
 // calculateNumbersSum([3, 5, 10, 56]);
 
@@ -69,7 +69,7 @@ function includes(numbers, number) {
             return false;
         }
     }
-}
+};
 
 console.log(includes([3], 4));
 
@@ -101,15 +101,13 @@ function createPerson({name, surname, age}) {
     }
 }
 
-console.log(createPerson({}))
-
 const myName = createPerson ({
     name: 'Victor',
     surname: 'Golovin',
     age: 28
 });
 
-console.log(myName.buildText());
+console.log(myPerson.buildText());
 
 
 console.log('-----------------------------');
@@ -127,17 +125,32 @@ const people = [
     createPerson({ name: 'Alex', surname: 'Ivanov', age: 45}),
 ];
 
+const maxAgeIndex = findOldest(people);
+
+console.log(buildText({
+    name: people[maxAgeIndex].getName(),
+    age: people[maxAgeIndex].getAge()
+}));
+
 
 function findOldest(people) {
+    let index = 0;
+    let maxAge = people[0].getAge();
+
     for (let i = 0; i < people.length; i++) {
-        const element = array[i];
-        
-    }
-}
+        if (people[i].getAge() >= maxAge) {
+            maxAge = people[i].getAge();
+            index = i;
+        };
+    };
+
+    return index;
+};
 
 function getAge() {
     return this.age
 };
 
-console.log(people);
-
+function buildText ({ name, age }) {
+    return `${name} самый мудрый, ему ${age}`;  
+};
