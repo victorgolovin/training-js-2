@@ -101,6 +101,8 @@ function createPerson({name, surname, age}) {
     }
 }
 
+console.log(createPerson({}))
+
 const myName = createPerson ({
     name: 'Victor',
     surname: 'Golovin',
