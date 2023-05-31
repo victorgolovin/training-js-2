@@ -101,7 +101,7 @@ function createPerson({name, surname, age}) {
     }
 }
 
-const myPerson = createPerson ({
+const myName = createPerson ({
     name: 'Victor',
     surname: 'Golovin',
     age: 28
