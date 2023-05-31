@@ -17,8 +17,8 @@ console.log(multiple(3, 6));
 // Функция возвращает дату строкой в формате dd/mm/yyyy.
 
 function buildDate(day, month, year) {
-    const DateResult = `${day}/${month}/${year}`;
-    return DateResult;
+    const dateResult = `${day}/${month}/${year}`;
+    return dateResult;
 }
 
 console.log(buildDate(13, 06, 1994));
@@ -66,47 +66,32 @@ function getMonthByNumber(monthNumber) {
     
     switch (monthNumber) {
         case 1:
-            console.log(JANUART);
-            break;
+            return console.log(JANUART);
         case 2:
-            console.log(FEBRUARY);
-            break;
+            return console.log(FEBRUARY);
         case 3:
-            console.log(MARCH);
-            break;
+            return console.log(MARCH);
         case 4:
-            console.log(APRIL);
-            break;
+            return console.log(APRIL);
         case 5:
-            console.log(MAY);
-            break;
+            return console.log(MAY);
         case 6:
-            console.log(JUNE);
-            break;
+            return console.log(JUNE);
         case 7:
-            console.log(JULY);
-            break;
+            return console.log(JULY);
         case 8:
-            console.log(AUGUST);
-            break;
+            return console.log(AUGUST);
         case 9:
-            console.log(SEPTEMBER);
-            break;
+            return console.log(SEPTEMBER);
         case 10:
-            console.log(OCTOBER);
-            break;
+            return console.log(OCTOBER);
         case 11:
-            console.log(NOVEMBER);
-            break;
+            return console.log(NOVEMBER);
         case 12:
-            console.log(DECEMBER);
-            break;
+            return console.log(DECEMBER);
         default:
-            console.log(ERROR_TEXT);
-            break;
+            return console.log(ERROR_TEXT);
     }
-
-    return monthNumber;
 }
 
 
@@ -126,36 +111,24 @@ const RUB_EUR_CURRENCY_TEXT_INPUT = 'EUR';
 const RUB_KZT_CURRENCY_TEXT_INPUT = 'KZT';
 const RUB_AED_CURRENCY_TEXT_INPUT = 'AED';
 
-const RUB_USD_CURRENCY_TEXT_OUTPUT = 'USD';
-const RUB_EUR_CURRENCY_TEXT_OUTPUT = 'EUR';
-const RUB_KZT_CURRENCY_TEXT_OUTPUT = 'KZT';
-const RUB_AED_CURRENCY_TEXT_OUTPUT = 'AED';
-
 const CURRENCY_TEXT_ERROR = 'Ошибка ввода, конвертация поддерживает только USD, EUR, KZT и AED.'
 
 
-convertRub(4563, 'USD');
+convertRub(543, 'KZT');
 
 
 function convertRub(valueRub, currency) {
 
     switch (valueRub, currency) {
         case RUB_USD_CURRENCY_TEXT_INPUT:
-            console.log(valueRub * RUB_USD_CURRENCY_RATE + ' ' + RUB_USD_CURRENCY_TEXT_OUTPUT);
-            break;
+            return console.log(valueRub * RUB_USD_CURRENCY_RATE + ' ' + RUB_USD_CURRENCY_TEXT_INPUT);
         case RUB_EUR_CURRENCY_TEXT_INPUT:
-            console.log(valueRub * RUB_EUR_CURRENCY_RATE + ' ' + RUB_EUR_CURRENCY_TEXT_OUTPUT);
-            break;
+            return console.log(valueRub * RUB_EUR_CURRENCY_RATE + ' ' + RUB_EUR_CURRENCY_TEXT_INPUT);
         case RUB_KZT_CURRENCY_TEXT_INPUT:
-            console.log(valueRub * RUB_KZT_CURRENCY_RATE + ' ' + RUB_KZT_CURRENCY_TEXT_OUTPUT);
-            break;
+            return console.log(valueRub * RUB_KZT_CURRENCY_RATE + ' ' + RUB_KZT_CURRENCY_TEXT_INPUT);
         case RUB_AED_CURRENCY_TEXT_INPUT:
-            console.log(valueRub * RUB_AED_CURRENCY_RATE + ' ' + RUB_AED_CURRENCY_TEXT_OUTPUT);
-            break;
+            return console.log(valueRub * RUB_AED_CURRENCY_RATE + ' ' + RUB_AED_CURRENCY_TEXT_INPUT);
         default:
-            console.log(CURRENCY_TEXT_ERROR);
-            break;
+            return console.log(CURRENCY_TEXT_ERROR);
     }
-
-    return valueRub;
 }
