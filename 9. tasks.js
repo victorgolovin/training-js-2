@@ -60,37 +60,37 @@ const DECEMBER = 'Декабрь';
 
 const ERROR_TEXT = 'Ошибка ввода';
 
-getMonthByNumber(5);
+console.log(getMonthByNumber(9));
 
 function getMonthByNumber(monthNumber) {
     
     switch (monthNumber) {
         case 1:
-            return console.log(JANUART);
+            return JANUART;
         case 2:
-            return console.log(FEBRUARY);
+            return FEBRUARY;
         case 3:
-            return console.log(MARCH);
+            return MARCH;
         case 4:
-            return console.log(APRIL);
+            return APRIL;
         case 5:
-            return console.log(MAY);
+            return MAY;
         case 6:
-            return console.log(JUNE);
+            return JUNE;
         case 7:
-            return console.log(JULY);
+            return JULY;
         case 8:
-            return console.log(AUGUST);
+            return AUGUST;
         case 9:
-            return console.log(SEPTEMBER);
+            return SEPTEMBER;
         case 10:
-            return console.log(OCTOBER);
+            return OCTOBER;
         case 11:
-            return console.log(NOVEMBER);
+            return NOVEMBER;
         case 12:
-            return console.log(DECEMBER);
+            return DECEMBER;
         default:
-            return console.log(ERROR_TEXT);
+            return ERROR_TEXT;
     }
 }
 
@@ -106,29 +106,29 @@ const RUB_EUR_CURRENCY_RATE = 0.013;
 const RUB_KZT_CURRENCY_RATE = 5.56;
 const RUB_AED_CURRENCY_RATE = 0.046;
 
-const RUB_USD_CURRENCY_TEXT_INPUT = 'USD';
-const RUB_EUR_CURRENCY_TEXT_INPUT = 'EUR';
-const RUB_KZT_CURRENCY_TEXT_INPUT = 'KZT';
-const RUB_AED_CURRENCY_TEXT_INPUT = 'AED';
+const RUB_USD_CURRENCY_TEXT = 'USD';
+const RUB_EUR_CURRENCY_TEXT = 'EUR';
+const RUB_KZT_CURRENCY_TEXT = 'KZT';
+const RUB_AED_CURRENCY_TEXT = 'AED';
 
 const CURRENCY_TEXT_ERROR = 'Ошибка ввода, конвертация поддерживает только USD, EUR, KZT и AED.'
 
 
-convertRub(543, 'KZT');
+console.log(convertRub(6754, 'KZT'));
 
 
 function convertRub(valueRub, currency) {
 
     switch (valueRub, currency) {
-        case RUB_USD_CURRENCY_TEXT_INPUT:
-            return console.log(valueRub * RUB_USD_CURRENCY_RATE + ' ' + RUB_USD_CURRENCY_TEXT_INPUT);
-        case RUB_EUR_CURRENCY_TEXT_INPUT:
-            return console.log(valueRub * RUB_EUR_CURRENCY_RATE + ' ' + RUB_EUR_CURRENCY_TEXT_INPUT);
-        case RUB_KZT_CURRENCY_TEXT_INPUT:
-            return console.log(valueRub * RUB_KZT_CURRENCY_RATE + ' ' + RUB_KZT_CURRENCY_TEXT_INPUT);
-        case RUB_AED_CURRENCY_TEXT_INPUT:
-            return console.log(valueRub * RUB_AED_CURRENCY_RATE + ' ' + RUB_AED_CURRENCY_TEXT_INPUT);
+        case RUB_USD_CURRENCY_TEXT:
+            return (valueRub * RUB_USD_CURRENCY_RATE + ' ' + RUB_USD_CURRENCY_TEXT);
+        case RUB_EUR_CURRENCY_TEXT:
+            return (valueRub * RUB_EUR_CURRENCY_RATE + ' ' + RUB_EUR_CURRENCY_TEXT);
+        case RUB_KZT_CURRENCY_TEXT:
+            return (valueRub * RUB_KZT_CURRENCY_RATE + ' ' + RUB_KZT_CURRENCY_TEXT);
+        case RUB_AED_CURRENCY_TEXT:
+            return (valueRub * RUB_AED_CURRENCY_RATE + ' ' + RUB_AED_CURRENCY_TEXT);
         default:
-            return console.log(CURRENCY_TEXT_ERROR);
+            return (CURRENCY_TEXT_ERROR);
     }
 }
